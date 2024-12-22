@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archery: Hobby of champions 🏹</title>
+    <style>
+      body {
+        background: #84b0b0;
+      }
+      h1 {
+        text-align: center;
+        color: #493738;
+      }
+      h2 {
+        text-align: center;
+        color: #493738;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #493738;
+      }
+      .container {
+        max-width: 600px;
+        background: rgba(254, 213, 213, 0.65);
+        padding: 25px;
+        border-radius: 15px;
+        margin: 0 auto;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 2px solid #574142;
+        background: #f8ebee;
+        color: #574142;
+        font-size: 14px;
+        border-radius: 10px;
+        padding: 5px;
+        transition: all 115ms ease-in-out;
+      }
+      button:hover {
+        background: rgb(85, 77, 103);
+        color: #feebd6;
+        cursor: pointer;
+      }
+      footer {
+        margin: 30px 0 30px 0;
+        text-align: center;
+        font-size: 13px;
+      }
+      .theme-button {
+        font-size: 12px;
+        background-color: rgb(85, 77, 103);
+        color: #feebd6;
+        transition: all 200ms ease-in-out;
+      }
+      .theme-button:hover {
+        background-color: #feebd6;
+        color: rgb(85, 77, 103);
+        cursor: pointer;
+      }
+      .sunrise-bow {
+        transition: all 175ms ease-in-out;
+      }
+      .sunrise-bow:hover {
+        filter: contrast(75%);
+        transform: scale(1.1);
+        background-color: #484546;
+      }
+
+      .grid {
+        margin: 10px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .grid img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+      .grid img:hover {
+        transform: scale(1.75);
+      }
+
+      .dark {
+        background: rgb(56, 79, 79);
+        color: #feebd5;
+      }
+      .dark .container {
+        background: rgba(155, 119, 119, 0.6);
+
+        color: #feebd5;
+      }
+      .dark .container h1,
+      .dark .container h2,
+      .dark .container p {
+        color: #feebd5;
+      }
+
+      .dark footer {
+        color: #fed5d5;
+      }
+
+      .dark a {
+        color: #f0616f;
+      }
+
+      .dark .signUp {
+        background-color: #384e4f;
+        color: #feebd5;
+      }
+      .dark .signUp:hover {
+        background-color: #feebd5;
+        color: #384e4f;
+      }
+      .dark .theme-button {
+        background-color: #feebd5;
+        color: #384e4f;
+      }
+
+      .dark .theme-button:hover {
+        background-color: #746668;
+        color: #feebd5;
+        border: 2px solid #feebd5;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <br />
+    <div class="container">
+      <h1>Archery</h1>
+      <h2>Don't <em>nock</em> it until you try it.</h2>
+      <a href="https://www.worldarchery.sport/" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/135/original/FlamingArrowScroll1.jpg?1733427331"
+          alt="Woman drawing her bow silhouetted against the sunrise."
+          class="sunrise-bow"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/132/original/Medieval-Archers.jpg?1733427098"
+          alt="Medieval archers shooting towards the sky"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/130/original/Bryony_Pitman_GB_Archery_at_Tokyo.jpg?1733427082"
+          alt="Bryony Pitman, British archer, taking aim at her target."
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/182/original/Archery-Child-Photo.jpg?1733510814"
+          alt="child taking aim at one of three targets"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/131/original/archer-in-armor-stockcake.jpg?1733427091"
+          alt="Archer in full armor"
+        />
+      </div>
+      <p>
+        Archery is the sport, practice, or skill of using a bow to shoot arrows.
+        The word comes from the Latin arcus, meaning bow. Historically, archery
+        has been used for hunting and combat. In modern times, it is mainly a
+        competitive sport and recreational activity.
+      </p>
+      <button class="signUp">Sign Up Today</button>
+    </div>
+    <footer>
+      Coded by 🐝
+      <a href="https://github.com/BeeHexed" target="_blank">BeeHexed</a>♀
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
